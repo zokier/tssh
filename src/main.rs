@@ -49,7 +49,7 @@ fn main() {
             Err(e) => {
                 match e {
                     readline::ReadlineError::EndOfFile => println!(""),
-                    readline::ReadlineError::InvalidUtf8(utf8_err) => println!("{:?}", utf8_err)
+                    readline::ReadlineError::InvalidUtf8(utf8_err) => println!("tssh error: invalid utf8: {}", utf8_err)
                 };
                 return;
             }
