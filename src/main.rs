@@ -130,7 +130,6 @@ fn eval(line: &str, cmd_buf: &mut String) -> EvalResult {
     return res;
 }
 
-
 fn main() {
     let mut cmd_buf = String::new();
     let mut prompt = "$ ";
@@ -152,7 +151,7 @@ fn main() {
             },
             Err(e) => {
                 match e {
-                    readline::ReadlineError::EndOfFile => println!(""),
+                    readline::ReadlineError::EndOfFile => println!("Bye!"),
                     readline::ReadlineError::InvalidUtf8(utf8_err) => println!("tssh error: invalid utf8: {}", utf8_err)
                 };
                 return;
