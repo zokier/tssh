@@ -80,7 +80,7 @@ fn parse(line: &str) -> Result<Vec<String>, String> {
                 current_token.push(c);
                 ParseState::Quoted
             },
-            (c, ParseState::BackslashNormal) => {
+            (_c, ParseState::BackslashNormal) => {
                 //TODO some fancy escape codes, eg \n
                 ParseState::Normal
             },
