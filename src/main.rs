@@ -6,7 +6,7 @@ enum EvalResult {
     Cont
 }
 
-#[derive(Copy)]
+#[derive(Copy,Clone)]
 enum ParseState {
     Quoted,
     BackslashQuoted,
